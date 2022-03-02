@@ -4,10 +4,12 @@ const displayHandle = (direction,id) =>{
     errorMessage.style.display= direction;
 }
 
+
 const clearSearchResult = (direction) =>{
     const searchResult = document.getElementById(direction);
     searchResult.innerHTML = ' ';
 }
+
 
 // details button action form
 const productDetails=(id)=>{
@@ -53,6 +55,8 @@ const productDetails=(id)=>{
             }
      } );
   }
+
+
         //search button action form
   document.getElementById('search-button').addEventListener('click',function(){
       clearSearchResult('show-details');
@@ -76,6 +80,8 @@ const productDetails=(id)=>{
   // clear search field 
       searchField.value = ' ';
   })
+
+  
   const displayResult = (phones) =>{
     
       const showResult = document.getElementById('show-Result');
