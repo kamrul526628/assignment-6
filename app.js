@@ -11,13 +11,13 @@ const clearSearchResult = (direction) =>{
 
 // details button action form
 const productDetails=(id)=>{
-    // console.log(id)
+    
      fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
      .then(res => res.json())
      .then(data =>{
-      // console.log(data.data.mainFeatures.sensors)
+      
       const sensorsName = data.data.mainFeatures.sensors;
-      // console.log(sensorsName);
+      
       let storeSensorName = '';
       for(const sensorName of sensorsName){
         storeSensorName = `${storeSensorName} ${sensorName}, `
@@ -40,7 +40,7 @@ const productDetails=(id)=>{
           </div>     
           `;
   
-          // inject release Date 
+          //release Date 
           const container = document.getElementById
           ('datails-body');
           const p = document.createElement('p');
@@ -53,7 +53,7 @@ const productDetails=(id)=>{
             }
      } );
   }
-  //search button action form
+        //search button action form
   document.getElementById('search-button').addEventListener('click',function(){
       clearSearchResult('show-details');
       clearSearchResult('show-Result');
@@ -77,7 +77,7 @@ const productDetails=(id)=>{
       searchField.value = ' ';
   })
   const displayResult = (phones) =>{
-    // console.log(phones);
+    
       const showResult = document.getElementById('show-Result');
      let count = 0;
       for(const phone of phones){
