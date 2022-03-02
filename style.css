@@ -1,0 +1,8 @@
+.display-handle{
+    display: none;
+}
+.card-button{
+  color: white;
+  background-color: brown;
+  border-radius: 10px;
+}
